@@ -1,0 +1,34 @@
+name: doBeanGriefing
+version: ${version}
+main: com.simbeans.dobeangriefing.GriefingPlugin
+description: Separates doMobGriefing into different events
+author: sim-the-bean
+api-version: ${apiversion}
+load: STARTUP
+bootstrapper: com.simbeans.dobeangriefing.GriefingPluginBootstrap
+loader: com.simbeans.dobeangriefing.GriefingPluginLoader
+defaultPerm: FALSE
+permissions:
+  dobeangriefing:
+    description: Allows changing dobeangriefing rules.
+    default: op
+dependencies:
+commands:
+  dobeangriefing:
+    description: Changes a beangriefing rule.
+    aliases: [beangrief]
+    permission: dobeangriefing
+    permission-message: You do not have /<permission>
+    usage: |
+      /<command> <rule> true/false
+      Valid rules:
+        allowHostileExplosions: Allow explosions to damage blocks.
+        allowHostileItemPickups: Allow enemies to pick up items.
+        allowPiglinBartering: Allow piglins to pickup gold ingots for bartering.
+        allowHostileBlockPickups: Allow endermen to pickup blocks.
+        allowHostileBreakDoors: Allow zombies to break doors.
+        bossOverride: Allow bosses to override griefing rules.
+        friendlyProtectAnimals: Protect animals from collateral damage.
+        friendlyProtectEntityBlocks: Protect minecarts, armor stands, etc from collateral damage.
+        friendlyProtectAgainstProjectiles: Protect friendlies against stray projectiles.
+        bossOverrideFriendly: Allow bosses to override friendly protection rules.

@@ -1,0 +1,12 @@
+overrideMobGriefing: true
+enable: true
+allowHostileExplosions: false
+allowHostileItemPickups: false
+allowPiglinBartering: true
+allowHostileBlockPickups: false
+allowHostileBreakDoors: false
+bossOverride: true
+friendlyProtectAnimals: true
+friendlyProtectEntityBlocks: true
+friendlyProtectAgainstProjectiles: true
+bossOverrideFriendly: false
