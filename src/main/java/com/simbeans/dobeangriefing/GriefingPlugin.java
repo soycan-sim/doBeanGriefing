@@ -122,7 +122,22 @@ public final class GriefingPlugin extends JavaPlugin implements Listener {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equals("dobeangriefing")) {
-            if (args.length != 2) {
+            if (args.length == 0) {
+                sender.sendMessage("Valid rules:");
+                sender.sendMessage("  allowHostileExplosions: Allow explosions to damage blocks.");
+                sender.sendMessage("  allowHostileItemPickups: Allow enemies to pick up items.");
+                sender.sendMessage("  allowPiglinBartering: Allow piglins to pickup gold ingots for bartering.");
+                sender.sendMessage("  allowHostileBlockPickups: Allow endermen to pickup blocks.");
+                sender.sendMessage("  allowHostileBreakDoors: Allow zombies to break doors.");
+                sender.sendMessage("  bossOverride: Allow bosses to override griefing rules.");
+                sender.sendMessage("  friendlyProtectAnimals: Protect animals from collateral damage.");
+                sender.sendMessage(
+                        "  friendlyProtectEntityBlocks: Protect minecarts, armor stands, etc from collateral damage.");
+                sender.sendMessage(
+                        "  friendlyProtectAgainstProjectiles: Protect friendlies against stray projectiles.");
+                sender.sendMessage("  bossOverrideFriendly: Allow bosses to override friendly protection rules.");
+                return true;
+            } else if (args.length != 2) {
                 return false;
             }
             if (!CONFIG_KEYS.contains(args[0])) {

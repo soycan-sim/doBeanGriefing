@@ -21,14 +21,4 @@ commands:
     permission-message: You do not have /<permission>
     usage: |
       /<command> <rule> true/false
-      Valid rules:
-        allowHostileExplosions: Allow explosions to damage blocks.
-        allowHostileItemPickups: Allow enemies to pick up items.
-        allowPiglinBartering: Allow piglins to pickup gold ingots for bartering.
-        allowHostileBlockPickups: Allow endermen to pickup blocks.
-        allowHostileBreakDoors: Allow zombies to break doors.
-        bossOverride: Allow bosses to override griefing rules.
-        friendlyProtectAnimals: Protect animals from collateral damage.
-        friendlyProtectEntityBlocks: Protect minecarts, armor stands, etc from collateral damage.
-        friendlyProtectAgainstProjectiles: Protect friendlies against stray projectiles.
-        bossOverrideFriendly: Allow bosses to override friendly protection rules.
+      To show all valid rules, use /<command> without any arguments.
